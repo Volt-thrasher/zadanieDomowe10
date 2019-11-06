@@ -16,7 +16,8 @@ public class Person {
                 '}';
     }
 
-    public Person(String firstName, String lastName, String pesel, int age) {
+    public Person(String firstName, String lastName, String pesel, int age)
+            throws NameUndefinedException, IncorrectAgeException {
         checkPreconditions(firstName, lastName, age);
         this.firstName = firstName;
         this.lastName = lastName;
@@ -24,7 +25,8 @@ public class Person {
         this.age = age;
     }
 
-    private void checkPreconditions(String firstName, String lastName, int age) {
+    private void checkPreconditions(String firstName, String lastName, int age)
+            throws NameUndefinedException, IncorrectAgeException {
         if (firstName==null || lastName==null||firstName.length()<2||lastName.length()<2){
             throw new NameUndefinedException();
         }
