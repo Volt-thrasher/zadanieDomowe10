@@ -4,15 +4,10 @@ public class Test {
     public static void main(String[] args) {
         Computer computer = new Computer("HP",new Processor("Core i7",
                 "Intel","123456",
-                2700,35),
-                new HardDisc("SSD","AMD","123457",512));
-        computer.setRam(new Ram("DDR3","AMD","13579",
-                2220,45,256) {
-            @Override
-            public void increaseFrequency(double increase) {
-                super.increaseFrequency(increase);
-            }
-        });
+                2700,35), new Ram("DDR3","HP","12457",
+                2200,45,256),
+                new HardDisc("SSD","AMD","13579"));
+
         try {
             computer.getProcessor().increaseFrequency(200);
             computer.getRam().increaseFrequency(100);

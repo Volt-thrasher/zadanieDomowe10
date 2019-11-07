@@ -6,20 +6,11 @@ public class Computer {
     private Ram ram;
     private HardDisc hardDisc;
 
-    public Computer(String producer, Processor processor, HardDisc hardDisc) {
+    public Computer(String producer, Processor processor, Ram ram, HardDisc hardDisc) {
         this.producer = producer;
         this.processor = processor;
+        this.ram = ram;
         this.hardDisc = hardDisc;
-    }
-
-    @Override
-    public String toString() {
-        return "Computer{" +
-                "producer='" + producer + '\'' +
-                ", processor=" + processor +
-                ", ram=" + ram +
-                ", hardDisc=" + hardDisc +
-                '}';
     }
 
     public String getProducer() {
@@ -53,4 +44,15 @@ public class Computer {
     public void setHardDisc(HardDisc hardDisc) {
         this.hardDisc = hardDisc;
     }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "producer='" + producer + '\'' +
+                ", processor=" + processor +
+                ", ram=" + ram +
+                ", hardDisc=" + hardDisc +
+                '}';
+    }
+
 }
